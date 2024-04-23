@@ -9,7 +9,7 @@ COPY requirements.txt .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
-RUN pip install -U sklearn
+RUN pip install -U scikit-learn
 
 # Copy the rest of the working directory contents into the container at /app
 COPY . .
