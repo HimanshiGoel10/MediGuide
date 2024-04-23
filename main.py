@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 import pandas as pd
 import numpy as np
 import pickle
+import os
 
 sym_des = pd.read_csv("DataSets/symtoms_df.csv")
 precautions = pd.read_csv("DataSets/precautions_df.csv")
@@ -88,4 +89,7 @@ def blog():
 
 
 # python main
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT",8080)))
 
