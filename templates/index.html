@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MediGuide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<style>
+    .bg{
+      background-color: #89CFF0;
+    }
+    .logo{
+      width:50px;
+      height:50px;
+      color: black;
+      margin: 0px 5px;
+      margin-right: 18px;
+    }
+    .myimg{
+       width:50px;
+      height:50px;
+      border: solid 1px white;
+      border-radius: 10px;
+    }
+
+    .result-container button{
+       font-size: 22px;
+       border: solid 2px black;
+    }
+
+    .result-container{
+       justify-content: center;
+       text-align: center;
+       padding: 20px;
+    }
+    .txt{
+       padding: 10px;
+       font-size: 20px;
+       justify-content:center;
+       text-align: center;
+    }
+
+    .syms{
+        background-color: #36454F;
+        display: flex;
+        flex-wrap:wrap;
+        padding: 7px;
+        border-radius: 20px;
+        border: solid black 2px;
+        margin: 7px ;
+        justify-content: space-around;
+        height: auto;
+    }
+
+    .syms div{
+       padding: 6px;
+       border: solid black 2px;
+       border-radius: 5px;
+       color: #FFFDD0;
+       margin: 2px;
+    }
+
+    .footer-basic {
+  padding:40px 0;
+  background-color:black;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+</style>
+<body class="bg">
+<!-- navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="logo">
+            <img class="myimg" src="{{url_for('static',filename='img3.jpeg')}}" alt="">
+        </div>
+        <a class="navbar-brand">MediGuide</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/developer">Developer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<h2 class="text-center" style="color:black; font-family:Monospace">MediGuide</h2>
+<div class="container mt-4 my-4" style="background:#242124; color:white; border-radius:12px; padding:50px">
+    <form action="predict" method="post">
+        <div class="form-group">
+            <div class="txt"><label for="symptoms">Copy any number of symptoms from the following and paste them separated by commas</label></div>
+            <div class="syms" >
+                <div>itching</div>
+                <div> skin_rash</div>
+                <div> nodal_skin_eruptions</div>
+                <div> dischromic _patches</div>
+                <div> skin_rash</div>
+                <div> continuous_sneezing</div>
+                <div> shivering</div>
+                <div>chills</div>
+                <div> watering_from_eyes</div>
+                <div> stomach_pain</div>
+                <div> acidity</div>
+                <div> silver_like_dusting
+</div>
+                <div> spinning_movements
+</div>
+                <div> painful_walking
+</div>
+                <div> swollen_legs
+</div>
+                <div> yellow_crust_ooze
+</div>
+                <div> blister
+</div>
+                <div> skin_peeling
+</div>
+                <div> continuous_feel_of_urine
+</div>
+                <div> foul_smell_of urine
+</div>
+                <div> ulcers_on_tongue
+</div>
+                <div> vomiting
+</div>
+                <div>cough</div>
+                <div> bladder_discomfort
+</div>
+                <div> yellowish_skin
+</div>
+                <div> nausea
+</div>
+                <div> loss_of_appetite
+</div>
+                <div> burning_micturition
+</div>
+                <div> spotting_ urination
+</div>
+                <div> abdominal_pain
+</div>
+                <div> passage_of_gases
+</div>
+                <div> indigestion
+</div>
+                <div> muscle_wasting
+</div>
+                <div> high_fever
+</div>          <div> extra_marital_contacts
+</div>
+                <div>  patches_in_throat
+</div>
+                <div>  fatigue
+</div>
+                <div>  weight_loss
+</div>
+                <div>  restlessness
+</div>
+                <div> lethargy</div>
+                <div>  irregular_sugar_level</div>
+                <div> sunken_eyes
+</div>
+                <div>  dehydration
+</div>
+                <div> diarrhoea
+</div>
+                <div>  breathlessness</div>
+                <div> chest_pain
+</div>
+                <div> headache
+</div>
+                <div> dizziness
+</div>
+                <div> loss_of_balance
+</div>
+                <div> lack_of_concentration
+</div>
+                <div> blurred_and_distorted_vision
+</div>
+                <div> excessive_hunger
+</div>
+                <div> back_pain
+</div>
+                <div> weakness_in_limbs
+</div>
+                <div> neck_pain
+</div>
+                <div> altered_sensorium
+</div>
+                <div> weakness_of_one_body_side
+</div>
+                <div>sweating</div>
+                <div>cramps</div>
+                <div> bruising
+</div>
+                <div> obesity
+</div>
+                <div> distention_of_abdomen</div>
+                <div> blackheads
+</div>
+                <div> scurring
+</div>
+                <div> pus_filled_pimples
+</div>
+                <div> spinning_movements
+</div>
+                <div> movement_stiffness
+</div>
+                <div> stiff_neck
+</div>
+                <div> joint_pain
+</div>
+                <div> hip_joint_pain
+</div>
+                <div> knee_pain
+</div>
+                <div> anxiety
+</div>
+                <div>  mood_swings
+</div>
+                <div> cold_hands_and_feets
+</div>
+                <div> weight_gain
+</div>
+                <div> bloody_stool
+</div>
+                <div> pain_in_anal_region
+</div>
+                <div> pain_during_bowel_movements
+</div>
+                <div> swelling_of_stomach
+</div>
+                <div> joint_pain
+</div>
+                <div> yellowing_of_eyes
+</div>
+                <div> dark_urine
+</div>
+                <div>  irritation_in_anus
+
+</div>
+            </div>
+            <div><input type="text" class="form-control" name="symptoms" placeholder="Type symptoms like itching, skin_rash"></div>
+        </div>
+
+
+        <br>
+
+        <button class="btn btn-danger" onclick="myFunction()"
+                style="width:100%; padding:14px; margin-bottom:5px; justify-content: center; text-align:center">Give
+            Results
+        </button>
+    </form>
+</div>
+
+{% if predicted_disease %}
+
+<!-- Results -->
+<h2 class="text-center my-4 mt-4" style="color:black">Results</h2>
+<div class="container">
+
+    <div class="result-container" style="justify-content: center">
+        <!-- Buttons to toggle display -->
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#diseaseModal"
+                style="padding:4px;  margin: 5px 40px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#F39334;color:black;">
+            Disease
+        </button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#descriptionModal"
+                style="padding:4px; margin: 5px 40px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#268AF3 ;color:black;">
+            Description
+        </button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#precautionModal"
+                style="padding:4px; margin: 5px 40px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#F371F9 ;color:black;">
+            Precaution
+        </button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#medicationsModal"
+                style="padding:4px; margin: 5px 40px 5px 0; font-size:20px;font-weight:bold; width:140px;border-radius:5px; background:#F8576F ;color:black;">
+            Medications
+        </button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#workoutsModal"
+                style="padding:4px; margin: 5px 40px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#99F741 ;color:black;">
+            Workouts
+        </button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#dietsModal"
+                style="padding:4px; margin: 5px 40px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#E5E23D;color:black;">
+            Diets
+        </button>
+    </div>
+</div>
+
+{% endif %}
+
+<!-- Disease Modal -->
+<div class="modal fade" id="diseaseModal" tabindex="-1" aria-labelledby="diseaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #020606; color:white;">
+                <!-- Set header background color inline -->
+                <h5 class="modal-title" id="diseaseModalLabel">Predicted Disease</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color: #modal-body-color;">
+                <!-- Set modal body background color inline -->
+                <p>{{ predicted_disease }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Description Modal -->
+<div class="modal fade" id="descriptionModal" tabindex="-1" aria-labelledby="descriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="descriptionModalLabel">Description</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>{{ dis_des }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Precaution Modal -->
+<div class="modal fade" id="precautionModal" tabindex="-1" aria-labelledby="precautionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="precautionModalLabel">Precaution</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    {% for i in dis_pre %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Medications Modal -->
+<div class="modal fade" id="medicationsModal" tabindex="-1" aria-labelledby="medicationsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="medicationsModalLabel">Medications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    {% for i in dis_med %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Workouts Modal -->
+<div class="modal fade" id="workoutsModal" tabindex="-1" aria-labelledby="workoutsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="workoutsModalLabel">Workouts</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    {% for i in dis_wrkout %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Diets Modal -->
+<div class="modal fade" id="dietsModal" tabindex="-1" aria-labelledby="dietsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="dietsModalLabel">Diets</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    {% for i in dis_diet %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-basic">
+        <footer>
+
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/">Home</a></li>
+                <li class="list-inline-item"><a href="/about">About</a></li>
+                <li class="list-inline-item"><a href="/contact">Contact</a></li>
+                <li class="list-inline-item"><a href="/developer">Developer</a></li>
+                <li class="list-inline-item"><a href="/blog">Blog</a></li>
+            </ul>
+            <p class="copyright">MediGuide © 2024</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const startSpeechRecognitionButton = document.getElementById('startSpeechRecognition');
+    const transcriptionDiv = document.getElementById('transcription');
+
+    startSpeechRecognitionButton.addEventListener('click', startSpeechRecognition);
+
+    function startSpeechRecognition() {
+        const recognition = new webkitSpeechRecognition(); // Use webkitSpeechRecognition for compatibility
+
+        recognition.lang = 'en-US'; // Set the language for recognition
+
+        recognition.onresult = function (event) {
+            const result = event.results[0][0].transcript;
+            transcriptionDiv.textContent = result;
+        };
+
+        recognition.onend = function () {
+            console.log('Speech recognition ended.');
+        };
+
+        recognition.start();
+    }
+
+    function myFunction(){
+    alert('Result ready ! Scroll down to check result ')
+    }
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+</html>
