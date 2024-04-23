@@ -17,3 +17,4 @@ threadpoolctl==3.4.0
 tzdata==2024.1
 gunicorn==22.0.0
 requests==2.31.0
+pickle5==0.0.12

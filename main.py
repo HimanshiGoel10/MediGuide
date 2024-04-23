@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import pandas as pd
 import numpy as np
-import pickle
+import pickle5 as pickle
 import os
 
 sym_des = pd.read_csv("DataSets/symtoms_df.csv")
