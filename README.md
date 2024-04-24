@@ -30,4 +30,4 @@ Mediguide is a medical recommendation system that provides personalized disease 
 
 ## Deployed Link
 
-[https://mediguide-ijt66kwhwq-em.a.run.app/](https://mediguideapp-ijt66kwhwq-uc.a.run.app/)
+"https://mediguide-ijt66kwhwq-em.a.run.app/
