@@ -18,6 +18,17 @@ Mediguide is a medical recommendation system that provides personalized disease 
 - **Developer Page:** Discover information about the developer behind Mediguide.
 - **Blog Page:** Explore insightful blog posts on disease precautions.
 
+## Tech Stack
+
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Backend: Flask (Python)
+- Data Analysis: Kaggle Dataset
+- Development Tools: Jupyter Notebook, PyCharm
+- Containerization: Dockerfile
+- Templating Engine: Jinja (for Flask)
+- Other: Python, npm, Git
+
+
 ## Deployed Link
 
 https://mediguide-ijt66kwhwq-em.a.run.app/
