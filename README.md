@@ -20,14 +20,13 @@ Mediguide is a medical recommendation system that provides personalized disease 
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, JavaScript, Bootstrap
-- Backend: Flask (Python)
-- Data Analysis: Kaggle Dataset
-- Development Tools: Jupyter Notebook, PyCharm
-- Containerization: Dockerfile
-- Templating Engine: Jinja (for Flask)
-- Other: Python, npm, Git
-
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap
+- **Backend:** Flask (Python)
+- **Development Tools:** PyCharm, Jupyter Notebook
+- **Data Analysis:** Kaggle Dataset
+- **Containerization:** Dockerfile
+- **Templating Engine:** Jinja (for Flask)
+- **Other:** Python, npm, Git
 
 ## Deployed Link
 
