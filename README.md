@@ -42,10 +42,8 @@ RUN python3 main.py
 
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
 - **Backend:** Flask (Python)
-- **Development Tools:** PyCharm, Jupyter Notebook
 - **Data Analysis:** Kaggle Dataset
 - **Containerization:** Dockerfile
-- **Templating Engine:** Jinja (for Flask)
 - **Other:** Python, npm, Git
 
 ## Deployed Link
