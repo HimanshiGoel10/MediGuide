@@ -1,7 +1,7 @@
 # Mediguide
 
 Mediguide is a medical recommendation system that provides personalized disease insights, precautions, diets, workouts, and causes based on user-entered symptoms.
-<a href="https://mediguide-ijt66kwhwq-em.a.run.app/">Visit</a> the website.
+<a href="[https://mediguide-ijt66kwhwq-em.a.run.app/](https://mediguideapp-ijt66kwhwq-uc.a.run.app/)">Visit</a> the website.
 
 ## Features
 
@@ -30,4 +30,5 @@ Mediguide is a medical recommendation system that provides personalized disease 
 
 ## Deployed Link
 
-"https://mediguide-ijt66kwhwq-em.a.run.app/
+["https://mediguide-ijt66kwhwq-em.a.run.app/
+](https://mediguideapp-ijt66kwhwq-uc.a.run.app/)
