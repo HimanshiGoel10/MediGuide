@@ -1,250 +1,236 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MediaGuide Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
   </head>
   <style>
-    .logo{
-      width:50px;
-      height:50px;
+    /* Navbar */
+    .navbar {
+      background-color: #343a40 !important;
+    }
+
+    .navbar-brand {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 1.2em;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
       color: black;
       margin: 0px 5px;
       margin-right: 18px;
     }
-    .myimg{
-       width:50px;
-      height:50px;
+    .myimg {
+      width: 50px;
+      height: 50px;
       border: solid 1px white;
       border-radius: 10px;
     }
-    .footer-basic {
-  padding:40px 0;
-  background-color:black;
-  color:#4b4c4d;
-}
 
-.footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
-}
+    .button-cv,
+    .button-gfc {
+      display: inline-block;
+      margin-left: 0%;
+      border-radius: 5px;
+      transition: background-color 0.5s;
+      background: black;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
 
-.footer-basic li {
-  padding:0 10px;
-}
+    a {
+      text-decoration: none;
+      color: black;
+    }
 
-.footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
-}
+    .button-cv:hover {
+      background-color: white;
+      color: black;
+    }
 
-.footer-basic ul a:hover {
-  opacity:1;
-}
+    .button-gfc {
+      background: lightsalmon;
+    }
 
-.footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
-}
+    .button-gfc:hover {
+      background-color: white;
+      color: black;
+    }
 
-.footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
-}
+    /* Styles for body section */
+    .body {
+      margin: 100px;
+      font-family: monospace;
+    }
 
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
+    .body h1 {
+      font-size: 30px;
+      color: black;
+      margin-bottom: 20px;
+    }
 
-.footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
-}
-      .button-cv, .button-gfc{
-   display: inline-block;
-   margin-left: 0%;
-   border-radius: 5px;
-   transition: background-color 0.5s;
-   background: black;
-   padding: 10px;
-   text-decoration: none;
-   font-weight: bold;
-   color: white;
-   border: none;
-   cursor: pointer;
-}
+    .demo1 {
+      color: orange;
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
 
-a{
-text-decoration:none;
-color:black;
-}
+    .demo2 {
+      color: black;
+      line-height: 20px;
+      display: block;
+      font-size: 18px;
+    }
 
-.button-cv:hover {
-   background-color: white;
-   color: black;
-}
+    .button-lrn,
+    .button-hire {
+      background: lightsalmon;
+      padding: 10px 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: whitesmoke;
+      display: inline-block;
+      margin: 30px 8px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      border: none;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
 
-.button-gfc{
-   background: lightsalmon;
-}
+    .button-lrn:hover {
+      background-color: whitesmoke;
+      color: black;
+    }
 
-.button-gfc:hover {
-   background-color: white;
-   color: black;
-}
+    .button-hire {
+      background: black;
+    }
 
-/* Styles for body section */
-.body {
-   margin: 100px;
-   font-family: monospace;
-}
+    .button-hire:hover {
+      background-color: seagreen;
+    }
 
-.body h1 {
-   font-size: 30px;
-   color: black;
-   margin-bottom: 20px;
-}
+    span {
+      color: seagreen;
+    }
 
-.demo1 {
-   color: orange;
-   margin-bottom: 30px;
-   font-size: 20px;
-}
+    /* Styles for image section */
+    .image {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      right: 200px;
+      bottom: 250px;
+    }
 
-.demo2 {
-   color: black;
-   line-height: 20px;
-   display: block;
-   font-size: 18px;
-}
-
-.button-lrn, .button-hire{
-   background: lightsalmon;
-   padding: 10px 12px;
-   text-decoration: none;
-   font-weight: bold;
-   color: whitesmoke;
-   display: inline-block;
-   margin: 30px 8px;
-   border-radius: 5px;
-   transition: background-color 0.3s;
-   border: none;
-   letter-spacing: 1px;
-   cursor: pointer;
-}
-
-.button-lrn:hover {
-   background-color: whitesmoke;
-   color: black;
-}
-
-.button-hire {
-   background: black;
-}
-
-.button-hire:hover {
-   background-color: seagreen;
-}
-
-span {
-   color: seagreen;
-}
-
-/* Styles for image section */
-.image {
-   width: 50%;
-   height: 50%;
-   position: absolute;
-   right:200px;
-   bottom:250px;
-}
-
-.image img {
-   height: 100%;
-   position:absolute;
-   left: 50%;
-   bottom: 10%;
-   transform: translate(-60%);
-}
+    .image img {
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translate(-60%);
+    }
   </style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+      <div class="container-fluid">
         <div class="logo">
-            <img class="myimg" src="{{url_for('static',filename='img3.jpeg')}}" alt="">
+          <img
+            class="myimg"
+            src="{{url_for('static',filename='img3.jpeg')}}"
+            alt=""
+          />
         </div>
         <a class="navbar-brand">MediGuide</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/developer">Developer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog">Blog</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/developer">Developer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
     <div class="body">
-         <p class="demo1">MEET DEVELOPER OF MEDIGUIDE</p>
-         <h1>Hello <br> I'm Himanshi <span>Goel.</span></h1>
-         <p class="demo2">I am currently a pre-final year student pursuing B.TECH from IGDTUW in Delhi, India, where I am nurturing my passion for technology. Proficient in C++ with a solid grasp of data structures and algorithms, I find joy in unraveling complex mathematical problems.</p>
-<p class="demo2">I enjoy crafting websites and delving into the latest in technology.</p>
-        <p class="demo2">Exploring various technologies, I have hands-on experience with HTML, CSS, JavaScript, Git, GitHub, and React. Beyond technical skills, I embody qualities such as time management, hard work, dedication, and organization.
-</p>
-         <button type="button" class="button-lrn"><a href="https://www.linkedin.com/in/himanshiigoel/">LINKEDIN</a></button>
-         <button type="button" class="button-lrn"><a href="https://github.com/HimanshiGoel10">GITHUB</a></button>
-        <button type="button" class="button-lrn"><a href="mailto:himanshigoel248@gmail.com">MAIL</a></button>
-      </div>
-
-
-    <div class="footer-basic">
-        <footer>
-
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="/">Home</a></li>
-                <li class="list-inline-item"><a href="/about">About</a></li>
-                <li class="list-inline-item"><a href="/contact">Contact</a></li>
-                <li class="list-inline-item"><a href="/developer">Developer</a></li>
-                <li class="list-inline-item"><a href="/blog">Blog</a></li>
-            </ul>
-            <p class="copyright">MediGuide © 2024</p>
-        </footer>
+      <p class="demo1">MEET DEVELOPER OF MEDIGUIDE</p>
+      <h1>
+        Hello <br />
+        I'm Himanshi <span>Goel.</span>
+      </h1>
+      <p class="demo2">
+        I am currently a pre-final year student pursuing B.TECH from IGDTUW in
+        Delhi, India, where I am nurturing my passion for technology. Proficient
+        in C++ with a solid grasp of data structures and algorithms, I find joy
+        in unraveling complex mathematical problems.
+      </p>
+      <p class="demo2">
+        I enjoy crafting websites and delving into the latest in technology.
+      </p>
+      <p class="demo2">
+        Exploring various technologies, I have hands-on experience with HTML,
+        CSS, JavaScript, Git, GitHub, and React. Beyond technical skills, I
+        embody qualities such as time management, hard work, dedication, and
+        organization.
+      </p>
+      <button type="button" class="button-lrn">
+        <a href="https://www.linkedin.com/in/himanshiigoel/">LINKEDIN</a>
+      </button>
+      <button type="button" class="button-lrn">
+        <a href="https://github.com/HimanshiGoel10">GITHUB</a>
+      </button>
+      <button type="button" class="button-lrn">
+        <a href="mailto:himanshigoel248@gmail.com">MAIL</a>
+      </button>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

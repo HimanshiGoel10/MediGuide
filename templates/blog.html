@@ -1,301 +1,283 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MediGuide Blog</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  </head>
-  <style>
-    .logo{
-      width:50px;
-      height:50px;
-      color: black;
-      margin: 0px 5px;
-      margin-right: 18px;
-    }
-    .myimg{
-       width:50px;
-      height:50px;
-      border: solid 1px white;
-      border-radius: 10px;
-    }
-    .footer-basic {
-  padding:40px 0;
-  background-color:black;
-  color:#4b4c4d;
-}
 
-*{
-font-family: urbanist, monospace;
-}
-
-.footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
-}
-
-.footer-basic li {
-  padding:0 10px;
-}
-
-.footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
-}
-
-.footer-basic ul a:hover {
-  opacity:1;
-}
-
-.footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
-}
-
-.footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
-}
-
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
-
-.footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
-}
-    body {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia;
-  background: #f1f1f1;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: auto;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-.blog{
-   width: 100%;
-   height: auto;
-   justify-content: center;
-   text-align: center;
-}
-
-.follow{
-justify-content: center;
-text-align: center;
-}
-
-.follow a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  width: 70%;
-  justify-content: center;
-  margin: auto;
-  border-radius: 15px;
-}
-
-
-
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediGuide Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<style>
+  /* Navbar */
+  .navbar {
+    background-color: #343a40 !important;
   }
-}
-  </style>
-  <body>
+
+  .navbar-brand {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.2em;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    color: black;
+    margin: 0px 5px;
+    margin-right: 18px;
+  }
+
+  .myimg {
+    width: 50px;
+    height: 50px;
+    border: solid 1px white;
+    border-radius: 10px;
+  }
+
+
+  * {
+    font-family: monospace;
+  }
+
+
+  body {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Georgia;
+    background: #f1f1f1;
+  }
+
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+  }
+
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {
+    float: left;
+    width: 75%;
+  }
+
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: auto;
+    padding: 20px;
+  }
+
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .blog {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .follow {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .follow a:link,
+  a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+    border-radius: 15px;
+  }
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+</style>
+
+<body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <div class="logo">
-            <img class="myimg" src="{{url_for('static',filename='img3.jpeg')}}" alt="">
-        </div>
-        <a class="navbar-brand">MediGuide</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/developer">Developer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog">Blog</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-    <div class="header">
-  <h2>Welcome to the Mediguide Blog</h2>
-</div>
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>The Importance of Precautions in Disease Management</h2>
-      <h5>April 23, 2024</h5>
-      <div >
-          <img class="blog" src="{{url_for('static',filename='blogImage.jpg')}}" alt=""></img>
+      <div class="logo">
+        <img class="myimg" src="{{url_for('static',filename='img3.jpeg')}}" alt="">
       </div>
-        <br>
-      <p>In today's fast-paced world, staying healthy is more important than ever. With the prevalence of various diseases and illnesses, taking precautions to protect yourself and others is crucial for maintaining overall well-being. In this blog post, we'll explore why precautions are essential in disease management and provide practical tips for minimizing the risk of illness.</p>
+      <a class="navbar-brand">MediGuide</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/developer">Developer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="card">
-      <h2>The Role of Precautions:</h2>
+  </nav>
+  <div class="header">
+    <h2>Welcome to the Mediguide Blog</h2>
+  </div>
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>The Importance of Precautions in Disease Management</h2>
+        <h5>April 23, 2024</h5>
+        <div>
+          <img class="blog" src="{{url_for('static',filename='blogImage.jpg')}}" alt=""></img>
+        </div>
         <br>
-      <p>Precautions play a vital role in breaking the chain of disease transmission and preventing outbreaks. By following simple yet effective preventive measures, individuals can significantly reduce their risk of contracting and spreading infections.</p>
+        <p>In today's fast-paced world, staying healthy is more important than ever. With the prevalence of various
+          diseases and illnesses, taking precautions to protect yourself and others is crucial for maintaining overall
+          well-being. In this blog post, we'll explore why precautions are essential in disease management and provide
+          practical tips for minimizing the risk of illness.</p>
+      </div>
+      <div class="card">
+        <h2>The Role of Precautions:</h2>
+        <br>
+        <p>Precautions play a vital role in breaking the chain of disease transmission and preventing outbreaks. By
+          following simple yet effective preventive measures, individuals can significantly reduce their risk of
+          contracting and spreading infections.</p>
         <p> Some common precautions include:</p>
-        <p><li>Frequent Handwashing: Washing hands with soap and water for at least 20 seconds can help remove germs and prevent their spread.</li></p>
-        <p><li>Practicing Social Distancing: Maintaining a safe distance from others, especially in crowded places, can help minimize exposure to infectious agents.</li></p>
-        <p><li>Avoiding Touching the Face: Touching the eyes, nose, or mouth with unwashed hands can introduce germs into the body and increase the risk of infection.</li></p>
-        <p><li>Disinfecting Surfaces: Regularly disinfecting frequently touched surfaces such as doorknobs, countertops, and electronic devices can help kill germs and prevent their spread.</li></p>
+        <p>
+          <li>Frequent Handwashing: Washing hands with soap and water for at least 20 seconds can help remove germs and
+            prevent their spread.</li>
+        </p>
+        <p>
+          <li>Practicing Social Distancing: Maintaining a safe distance from others, especially in crowded places, can
+            help minimize exposure to infectious agents.</li>
+        </p>
+        <p>
+          <li>Avoiding Touching the Face: Touching the eyes, nose, or mouth with unwashed hands can introduce germs into
+            the body and increase the risk of infection.</li>
+        </p>
+        <p>
+          <li>Disinfecting Surfaces: Regularly disinfecting frequently touched surfaces such as doorknobs, countertops,
+            and electronic devices can help kill germs and prevent their spread.</li>
+        </p>
 
         <h4>Efficacy of Precautionary Measures:</h4>
-        <p>Numerous studies have demonstrated the efficacy of precautionary measures in curbing the transmission of infectious diseases. For instance, research has shown that regular handwashing with soap and water can reduce the incidence of respiratory infections by up to 20%. Similarly, the widespread adoption of face masks during the COVID-19 pandemic has been credited with mitigating the spread of the virus and saving countless lives.</p>
-    <br>
+        <p>Numerous studies have demonstrated the efficacy of precautionary measures in curbing the transmission of
+          infectious diseases. For instance, research has shown that regular handwashing with soap and water can reduce
+          the incidence of respiratory infections by up to 20%. Similarly, the widespread adoption of face masks during
+          the COVID-19 pandemic has been credited with mitigating the spread of the virus and saving countless lives.
+        </p>
+        <br>
         <h4>Empowering Communities Through Precautions:</h4>
-        <p>Beyond individual benefits, precautions play a pivotal role in fostering a culture of collective responsibility and solidarity. By adhering to recommended guidelines and encouraging others to do the same, individuals contribute to the greater good of their communities. Whether it's practicing social distancing, staying home when sick, or getting vaccinated, each precautionary action has ripple effects that extend far beyond its immediate impact.</p>
+        <p>Beyond individual benefits, precautions play a pivotal role in fostering a culture of collective
+          responsibility and solidarity. By adhering to recommended guidelines and encouraging others to do the same,
+          individuals contribute to the greater good of their communities. Whether it's practicing social distancing,
+          staying home when sick, or getting vaccinated, each precautionary action has ripple effects that extend far
+          beyond its immediate impact.</p>
 
         <h4>Conclusion</h4>
-        <p>In conclusion, the importance of precautions in disease management transcends individual actions to encompass broader societal imperatives. As we navigate through an ever-evolving landscape of infectious threats, the proactive adoption of precautions emerges as a cornerstone of resilience and preparedness. By embracing a culture of prevention, investing in robust public health systems, and prioritizing community well-being, we can navigate through crises with strength, solidarity, and determination.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2 style="text-align: center">About Me</h2>
-        <p>I am Himanshi, a Tech enthusiast.</p>
-        <p>My journey is driven by a deep curiosity to learn and implement new concepts in the real world. </p>
-        <p>I believe in the power of kindness and humanity, striving to be a force for good and always choosing the path that aligns with my values.</p>
-    </div>
-    <div class="card">
-      <h3 style="text-align: center">Popular Post</h3>
-      <div class="fakeimg">
-          <h5> 5 Common Symptoms and Their Underlying Causes</h5>
-          <p style="color: white">Explore the underlying causes behind common symptoms like fatigue, headaches, and digestive issues. Understanding the root cause is the first step towards effective symptom management and treatment.</p>
-      </div><br>
-      <div class="fakeimg">
-          <h5> Nutrition Tips for Optimal Health and Wellness</h5>
-          <p style="color: white">Explore the role of nutrition in maintaining overall health and well-being. From balanced meal planning to superfood recommendations, discover practical tips to fuel your body and support your immune system.</p>
-      </div><br>
-      <div class="fakeimg">
-          <h5>Understanding Disease: From Diagnosis to Treatment</h5>
-          <p style="color: white">Gain insight into the journey from disease diagnosis to treatment and management. We'll explore the importance of early detection, available treatment options, and strategies for living well with chronic conditions.</p>
+        <p>In conclusion, the importance of precautions in disease management transcends individual actions to encompass
+          broader societal imperatives. As we navigate through an ever-evolving landscape of infectious threats, the
+          proactive adoption of precautions emerges as a cornerstone of resilience and preparedness. By embracing a
+          culture of prevention, investing in robust public health systems, and prioritizing community well-being, we
+          can navigate through crises with strength, solidarity, and determination.</p>
       </div>
     </div>
-    <div class="card">
-      <h3 style="text-align: center">Follow Me</h3>
-        <div class="follow">
-        <a href="https://www.linkedin.com/in/himanshiigoel/" target="_blank">LinkedIn</a>
-        <br>
-        <a href="https://github.com/HimanshiGoel10" target="_blank">GitHub</a>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2 style="text-align: center">About Me</h2>
+        <p>I am Himanshi, a Tech enthusiast.</p>
+        <p>My journey is driven by a deep curiosity to learn and implement new concepts in the real world. </p>
+        <p>I believe in the power of kindness and humanity, striving to be a force for good and always choosing the path
+          that aligns with my values.</p>
+      </div>
+      <div class="card">
+        <h3 style="text-align: center">Popular Post</h3>
+        <div class="fakeimg">
+          <h5> 5 Common Symptoms and Their Underlying Causes</h5>
+          <p style="color: white">Explore the underlying causes behind common symptoms like fatigue, headaches, and
+            digestive issues. Understanding the root cause is the first step towards effective symptom management and
+            treatment.</p>
+        </div><br>
+        <div class="fakeimg">
+          <h5> Nutrition Tips for Optimal Health and Wellness</h5>
+          <p style="color: white">Explore the role of nutrition in maintaining overall health and well-being. From
+            balanced meal planning to superfood recommendations, discover practical tips to fuel your body and support
+            your immune system.</p>
+        </div><br>
+        <div class="fakeimg">
+          <h5>Understanding Disease: From Diagnosis to Treatment</h5>
+          <p style="color: white">Gain insight into the journey from disease diagnosis to treatment and management.
+            We'll explore the importance of early detection, available treatment options, and strategies for living well
+            with chronic conditions.</p>
         </div>
-    </div>
+      </div>
+      <div class="card">
+        <h3 style="text-align: center">Follow Me</h3>
+        <div class="follow">
+          <a href="https://www.linkedin.com/in/himanshiigoel/" target="_blank">LinkedIn</a>
+          <br>
+          <a href="https://github.com/HimanshiGoel10" target="_blank">GitHub</a>
+        </div>
+      </div>
       <br>
-  </div>
-</div>
-    <div class="footer-basic">
-        <footer>
-
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="/">Home</a></li>
-                <li class="list-inline-item"><a href="/about">About</a></li>
-                <li class="list-inline-item"><a href="/contact">Contact</a></li>
-                <li class="list-inline-item"><a href="/developer">Developer</a></li>
-                <li class="list-inline-item"><a href="/blog">Blog</a></li>
-            </ul>
-            <p class="copyright">MediGuide © 2024</p>
-        </footer>
     </div>
+  </div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
 
 </html>
