@@ -18,6 +18,26 @@ Visit the website: https://mediguideapp-ijt66kwhwq-uc.a.run.app/
 - **Developer Page:** Discover information about the developer behind Mediguide.
 - **Blog Page:** Explore insightful blog posts on disease precautions.
 
+## How to Run the code
+
+Clone the repository
+
+RUN git clone "https://github.com/HimanshiGoel10/MediGuide"
+
+Navigate to the project directory
+
+### Create a virtual environment
+RUN python3 -m venv env
+
+### Activate the virtual environment 
+RUN source env/bin/activate
+
+### Install the required packages 
+RUN pip install -r requirements. txt
+
+### To run the app 
+RUN python3 main.py 
+
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
