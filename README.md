@@ -46,6 +46,21 @@ RUN python3 main.py
 - **Containerization:** Dockerfile
 - **Other:** Python, npm, Git
 
+## Pictures Of Website
+
+1. Go to MediGuide : https://mediguideapp-ijt66kwhwq-uc.a.run.app/
+   
+![pic1](https://github.com/HimanshiGoel10/MediGuide/assets/161726626/5ec4ba6d-b151-4c58-a49f-7a24402c6228)
+
+2. Select symptoms from the list
+   
+![pic1A](https://github.com/HimanshiGoel10/MediGuide/assets/161726626/f6ed912d-d740-43ff-8dbf-d77e7b3136a7)
+
+3. Get Results
+
+![pic2](https://github.com/HimanshiGoel10/MediGuide/assets/161726626/2ffda158-5652-46c1-9cff-b02b5b0d0e75)
+
+
 ## Deployed Link
 
 ["https://mediguide-ijt66kwhwq-em.a.run.app/
